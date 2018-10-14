@@ -337,8 +337,8 @@ nav {
         flex-direction: column;
     }
     .project-tile-img {
-        max-width: 225px;
-        max-height: 175px;
+        max-width: 200px;
+        max-height: 150px;
         margin: 0;
     }
     .project-tile-description {
