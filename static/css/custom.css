@@ -298,7 +298,7 @@ nav {
 
 .project-tile-img {
     margin-right: 30px;
-    max-width: 350px;
+    max-width: 300px;
     max-height: 250px;
     object-fit: cover;
     transition-duration: 0.3s;
