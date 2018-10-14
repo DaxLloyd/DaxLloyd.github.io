@@ -298,7 +298,7 @@ nav {
 
 .project-tile-img {
     margin-right: 30px;
-    max-width: 300px;
+    max-width: 350px;
     max-height: 250px;
     object-fit: cover;
     transition-duration: 0.3s;
@@ -306,6 +306,8 @@ nav {
     border-radius: 10%;
     box-shadow: -8px 4px 20px 0 rgba(0, 0, 0, 0.3);
 }
+
+
 
 .project-tile-description {
     font-family: 'Lora', serif;
@@ -335,6 +337,8 @@ nav {
         flex-direction: column;
     }
     .project-tile-img {
+        max-width: 225px;
+        max-height: 175px;
         margin: 0;
     }
     .project-tile-description {
