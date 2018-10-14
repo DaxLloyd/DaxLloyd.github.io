@@ -15,16 +15,6 @@ body {
     left: 50%
 }
 
-.visuallyHidden {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
 main {
     background: white;
     border-top: 1px solid #162129;
@@ -80,13 +70,13 @@ nav {
     color: white;
 }
 
-nav ul {
+#nav-link-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul * {
+#nav-link-list * {
     display: inline;
     text-align: center;
     font-size: 1.1rem;
@@ -124,57 +114,63 @@ nav ul * {
     color: white;
 }
 
-.active {
-    background: rgba(1, 55, 55, 0.3);
-    color: #ff0000;
-    border-left: 1px solid #ff0000;
-}
-
 @media (max-width: 765px) {
     nav {
+        top: 0;
+        overflow: hidden;
+        width: 100%;
+        color: white;
+        min-height: 60px;
         display: flex;
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
+        position: -webkit-sticky;
+        font-family: 'Rubik', sans-serif;
+        /* Safari */
+        position: sticky;
+        -webkit-transition: background 1s linear;
+        -moz-transition: background 1s linear;
+        -o-transition: background 1s linear;
+        transition: background 1s linear;
     }
     .nav-title {
-        margin: auto;
-        padding: 10px 0 10px 0;
+        display: none;
     }
-    .nav-title a {
-        color: white;
-        text-decoration: none;
-        -moz-transition: font-size .25s, color .25s;
-        -o-transition: font-size .25s, color .25s;
-        -webkit-transition: font-size .25s, color .25s;
-        transition: font-size .25s, color .25s;
-    }
-    .nav-title a:hover {
-        font-size: 1.5rem;
-        color: #162129;
-    }
-    nav ul {
-        display: block;
-        width: 100%;
+    #nav-link-list {
         list-style-type: none;
-        padding: 0;
         margin: 0;
+        padding: 0;
     }
-    nav ul * {
-        display: block;
-        float: none;
+    #nav-link-list * {
+        font-size: 1.1rem;
     }
     .nav-link a {
-        border-left: none;
-        border-top: 1px solid white;
-        padding: 10px 0 10px 0;
+        color: white;
+        padding: 2px 12px 2px 12px;
+        margin: 0;
+        border: none;
+        text-decoration: none;
+        -webkit-transition: color .1s linear;
+        -moz-transition: color .1s linear;
+        -o-transition: color .1s linear;
+        transition: color .1s linear;
+    }
+    .nav-link-dark-bg a {
+        color: #C2C2C2;
+        border: none;
+        -webkit-transition: color .2s linear;
+        -moz-transition: color .2s linear;
+        -o-transition: color .2s linear;
+        transition: color .2s linear;
     }
     .nav-link a:hover {
-        color: #36454F;
-        border-top: 1px solid #36454F;
-        border-left: none;
-        text-shadow: 1px 1px 4px #212121;
+        color: #162129;
+        border: none;
+    }
+    .nav-link-dark-bg a:hover {
+        color: white;
+        border: none;
     }
 }
 
@@ -216,7 +212,7 @@ nav ul * {
     border: 2px solid #162129;
 }
 
-.hidden {
+.fade-in {
     display: none;
 }
 
@@ -316,7 +312,11 @@ nav ul * {
     margin-left: 30px;
     padding: 20px;
     max-width: 400px;
-    text-align: justify;
+    text-align: left;
+}
+
+.project-tile-p {
+    font-family: 'Lora', serif;
 }
 
 #project-bottom {
@@ -369,11 +369,10 @@ nav ul * {
     margin: auto;
 }
 
-p {
+#resume p {
     font-family: 'Lora', serif;
     line-height: 1.4;
     font-size: 1.1rem;
-    font-family: Raleway, sans-serif;
 }
 
 #degree-sublist {
@@ -422,6 +421,7 @@ footer h2 {
 }
 
 #personal-photo {
+    margin-left: 5px;
     width: 125px;
     height: 125px;
     object-fit: cover;
@@ -434,12 +434,12 @@ footer h2 {
     display: flex;
     list-style-type: none;
     padding: 5px 0 10px 0;
-    margin: 0;
+    margin: 0 0 0 5px;
 }
 
 #contact-social-icons * {
     width: 32px;
-    height: 32px
+    height: 32px;
 }
 
 #contact-div-right {
@@ -472,8 +472,16 @@ footer h2 {
 }
 
 .div-right-link {
-    color: white;
+    color: #C2C2C2;
     text-decoration: none;
+    -webkit-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+    -o-transition: color .2s linear;
+    transition: color .2s linear;
+}
+
+.div-right-link:hover {
+    color: white;
 }
 
 footer small {
