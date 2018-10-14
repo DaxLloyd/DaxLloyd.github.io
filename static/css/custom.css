@@ -275,7 +275,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 50px 0 50px 0;
     max-width: 1000px;
 }
 
@@ -335,6 +335,7 @@ nav {
 @media (max-width: 765px) {
     .project-tile {
         flex-direction: column;
+        padding: 25px 0 25px 0;
     }
     .project-tile-img {
         max-width: 200px;
