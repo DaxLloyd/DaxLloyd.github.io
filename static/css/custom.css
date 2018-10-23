@@ -39,10 +39,10 @@ nav {
   font-family: "Rubik", sans-serif;
   /* Safari */
   position: sticky;
-  -webkit-transition: background 1s linear;
-  -moz-transition: background 1s linear;
-  -o-transition: background 1s linear;
-  transition: background 1s linear;
+  -webkit-transition: background .5s linear;
+  -moz-transition: background .5s linear;
+  -o-transition: background .5s linear;
+  transition: background .5s linear;
 }
 
 .nav-title {
