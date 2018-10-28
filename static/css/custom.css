@@ -317,6 +317,7 @@ nav {
     max-width: 275px;
     max-height: 225px;
     margin: auto;
+    position: relative;
   }
   .project-tile-description {
     margin: 0;

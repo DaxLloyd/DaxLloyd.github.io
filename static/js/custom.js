@@ -6,7 +6,7 @@ $(document).ready(function(){
   
   $(window).scroll(function () {
     var windowHeight = $(this).scrollTop();
-    
+
     if (windowHeight >= vh ) { 
       $("#navbar").css("background", "#212121");
       $(".nav-title").addClass("nav-title-dark-bg");
@@ -16,5 +16,6 @@ $(document).ready(function(){
       $(".nav-title").removeClass("nav-title-dark-bg");
       $(".nav-link").removeClass("nav-link-dark-bg");
     }
+
   });        
 });
